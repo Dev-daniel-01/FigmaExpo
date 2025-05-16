@@ -1,5 +1,5 @@
+import { Footer } from "@/components/footer";
 import { router } from "expo-router";
-import { useState } from "react";
 import {
     Image,
     SafeAreaView, StyleSheet, Text,
@@ -9,8 +9,7 @@ import {
 
 
 export default function HomeScreen() {
-  const [email, setEmail] = useState("");
-  const [pass, setPass] = useState("");
+
 
   const onPress = () => {
     router.push("/(tabs)");
@@ -22,9 +21,11 @@ export default function HomeScreen() {
             <Image style={styles.logo} source={require("@/assets/images/rick-morty.png")}></Image>
             <Image style={styles.title} source={require("@/assets/images/logo.webp")}></Image>
             <TouchableOpacity style={styles.btn} onPress={onPress}>
-                    <Text  style={styles.btnText}>Entrar</Text>
+            <Text  style={styles.btnText}>Entrar</Text>
             </TouchableOpacity>
+            <Footer></Footer>
       </SafeAreaView>
+     
     </>
   );
 }

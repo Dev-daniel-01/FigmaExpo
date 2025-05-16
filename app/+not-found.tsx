@@ -1,15 +1,14 @@
+import { Footer } from "@/components/footer";
 import { Link, Stack } from "expo-router";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 
 export default function NotFoundScreen() {
   return (
     <>
-      <Stack.Screen options={{ title: "Oops!" }} />
       <View style={styles.container}>
-        <Text type="title">This screen does not exist.</Text>
-        <Link href="/" style={styles.link}>
-          <Text type="link">Go to home screen!</Text>
-        </Link>
+      <Image style={styles.erro} source={require("@/assets/images/error.jpg")}></Image>
+      <Image style={styles.rickErro} source={require("@/assets/images/erro4.png")}></Image>
+        <Footer></Footer>
       </View>
     </>
   );
@@ -18,12 +17,19 @@ export default function NotFoundScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: 'black',
     alignItems: "center",
     justifyContent: "center",
-    padding: 20,
+
   },
-  link: {
-    marginTop: 15,
-    paddingVertical: 15,
+  erro: {
+    marginTop: -100,
+    width: 350,
+    height: 350,
+
   },
+  rickErro: {
+    width: 350,
+    height: 350
+  }
 });
