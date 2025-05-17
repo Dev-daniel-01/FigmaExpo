@@ -12,11 +12,13 @@ export default function HomeScreen() {
 
 
   const onPress = () => {
-    router.push("/(tabs)");
+    router.push("/(tabs)/explore");
   };
+
 
   return (
     <>
+
       <SafeAreaView style={styles.container}>
             <Image style={styles.logo} source={require("@/assets/images/rick-morty.png")}></Image>
             <Image style={styles.title} source={require("@/assets/images/logo.webp")}></Image>
